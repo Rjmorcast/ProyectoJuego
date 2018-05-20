@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class CarSpawner : MonoBehaviour {
@@ -37,5 +38,9 @@ public class CarSpawner : MonoBehaviour {
             }
         }
         }
-        
+    public void juan()
+    {
+        SceneManager.LoadScene("Level1");
+    }
+
 }

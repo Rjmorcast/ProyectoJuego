@@ -10,10 +10,12 @@ public class Bill : MonoBehaviour {
     public GameObject feet;
     public LayerMask layer;
     private Boolean parado = true;
+    Animator anim;
 
     // Use this for initialization
     void Start () {
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
 	
 	// Update is called once per frame
@@ -39,5 +41,7 @@ public class Bill : MonoBehaviour {
                 parado = false;
             }
         }
+        float move = Input.GetAxis("Vertical");
+        anim.SetFloat("Speed", Mathf.Abs(move));
     }
 }
