@@ -23,18 +23,21 @@ public class Bill : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        //Controla el salto
         if (Input.GetButtonDown("Jump"))
         {
             Jump();
         }
       //  move = 0;
+      //Controla cuando el personaje se agacha
         if (Input.GetButtonDown("Vertical"))
         {
             Down();
         }
+        //Imprime y lleva el conteo del puntaje
         scoreText.text = "Score: " + GameController.instance.score.ToString();
     }
-
+    //Funcion para que el personaje pueda saltar
     public void Jump() {
         if (!parado)
         {
@@ -50,7 +53,7 @@ public class Bill : MonoBehaviour {
 
         // anim.SetFloat("Speed", Mathf.Abs(move));
     }
-
+    //Funcion para que el personaje pueda bajar
     public void Down() {
         if (parado)
         {

@@ -13,6 +13,7 @@ public class Car : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        //Funcion para darle movimiento a el carro
         transform.Translate(new Vector3(-1, 0, 0) * forwardSpeed * Time.deltaTime);
         if (transform.position.x < -14)
         {
@@ -22,7 +23,7 @@ public class Car : MonoBehaviour {
 
     }
     private void OnCollisionEnter2D(Collision2D collision)
-    {
+    {//Funcion para que se de la condicion de perder
         GameController.instance.gameOver = true;
         GameController.instance.GameOver();
     }

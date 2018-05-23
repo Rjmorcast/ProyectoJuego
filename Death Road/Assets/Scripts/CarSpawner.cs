@@ -18,7 +18,7 @@ public class CarSpawner : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+        //Funcion para que al azar se generen carros o camiones
         if (elapsedTime < spawnTime)
         {
             elapsedTime += Time.deltaTime;
@@ -38,6 +38,7 @@ public class CarSpawner : MonoBehaviour {
             }
         }
         }
+    //Funcion para cambiar de escena
     public void juan()
     {
         SceneManager.LoadScene("Level1");

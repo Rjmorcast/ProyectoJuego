@@ -19,7 +19,7 @@ public class GameController : MonoBehaviour {
 	void Update () {
 		
 	}
-
+    //Funcion para regresar al menu de inicio despues de perder
     public void GameOver() {
         SceneManager.LoadScene("MenuInicio");
     }
