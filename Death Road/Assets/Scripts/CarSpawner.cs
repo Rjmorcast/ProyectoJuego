@@ -28,12 +28,12 @@ public class CarSpawner : MonoBehaviour {
             float random = Random.Range(-1f, 1f);
             if (random < 0)
             {
-                Instantiate(Truck, new Vector3(5, -1f, 0), Quaternion.identity);
+                Instantiate(Truck, new Vector3(6.5F, -1f, 0), Quaternion.identity);
                 elapsedTime = 0;
             }
             else
             {
-                Instantiate(Car, new Vector3(5, -2.5f, 0), Quaternion.identity);
+                Instantiate(Car, new Vector3(6.5F, -2.5f, 0), Quaternion.identity);
                 elapsedTime = 0;
             }
         }
@@ -42,5 +42,4 @@ public class CarSpawner : MonoBehaviour {
     {
         SceneManager.LoadScene("Level1");
     }
-
 }

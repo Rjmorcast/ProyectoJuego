@@ -18,6 +18,12 @@ public class Truck : MonoBehaviour {
         if (transform.position.x < -14)
         {
             Destroy(gameObject);
+            GameController.instance.score++;
         }
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        GameController.instance.gameOver = true;
+        GameController.instance.GameOver();
     }
 }
